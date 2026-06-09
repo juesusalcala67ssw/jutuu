@@ -193,7 +193,7 @@
     <p class="cargando-texto">Espere unos minutos, no cierre la pestaña.</p>
 
     
-    <div class="cronometro" id="tiempo">00:15</div>
+    <div class="cronometro" id="tiempo">00:20</div>
     <div class="barra-fondo">
         <div class="barra-progreso" id="barra"></div>
     </div>
@@ -213,7 +213,7 @@
 
 
 
-    <script>let tiempoRestante = 15; 
+    <script>let tiempoRestante = 20; 
 const elementoTiempo = document.getElementById('tiempo');
 const elementoBarra = document.getElementById('barra');
 const elementoMensaje = document.getElementById('mensaje-estado');
@@ -232,7 +232,7 @@ const intervalo = setInterval(() => {
     let segundos = tiempoRestante % 60;
     elementoTiempo.textContent = `0${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
 
-    let porcentaje = ((15 - tiempoRestante) / 15) * 100;
+    let porcentaje = ((20 - tiempoRestante) / 20) * 100;
     elementoBarra.style.width = porcentaje + '%';
 
     if (tiempoRestante === 11) {
